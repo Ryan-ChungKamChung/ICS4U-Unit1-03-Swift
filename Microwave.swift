@@ -38,6 +38,7 @@ print("What food item would you like to heat up? (soup, sub or pizza): ", termin
 // Gathers the user input and makes sure it isn't empty
 guard let foodItemInput = readLine(), !foodItemInput.isEmpty else {
     print("Please enter a correct input.")
+    print("\nDone.")
     exit(001)
 }
 
@@ -46,7 +47,9 @@ switch foodItemInput.lowercased() {
 case "soup": totalSecondsToCook = soupHeatingTime
 case "sub": totalSecondsToCook = subHeatingTime
 case "pizza": totalSecondsToCook = pizzaHeatingTime
-default: print("Not a valid food item from the list."); exit(002)
+default: print("Not a valid food item from the list.")
+  print("\nDone.")
+  exit(002)
 }
 
 // User prompt
@@ -55,6 +58,7 @@ print("How many items would you like to heat up? ", terminator: "")
 // Gathers the user input and makes sure it isn't empty
 guard let quantityInputString = readLine(), !quantityInputString.isEmpty else {
     print("Please enter a correct input.")
+    print("\nDone.")
     exit(001)
 }
 
@@ -67,7 +71,9 @@ if let quantityInput = Int(quantityInputString) {
     case oneItem: break
     case twoItems: totalSecondsToCook *= twoItemMultiplier
     case threeItems: totalSecondsToCook *= threeItemMultiplier
-    default: print("Not a valid quantity"); exit(003)
+    default: print("Not a valid quantity")
+        print("\nDone.")
+        exit(003)
     }
 
     // Calculates the minutes and seconds that are required to heat up the food
