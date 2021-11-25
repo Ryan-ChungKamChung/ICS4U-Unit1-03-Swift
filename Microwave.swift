@@ -78,7 +78,7 @@ if let quantityInput = Int(quantityInputString) {
 
     // Calculates the minutes and seconds that are required to heat up the food
     // item(s)
-    let minutesToCook = totalSecondsToCook / secsInMin;
+    let minutesToCook = totalSecondsToCook / secsInMin
     let secondsToCook =
     Double(totalSecondsToCook).truncatingRemainder(dividingBy: secsInMin)
 
