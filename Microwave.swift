@@ -48,8 +48,8 @@ case "soup": totalSecondsToCook = soupHeatingTime
 case "sub": totalSecondsToCook = subHeatingTime
 case "pizza": totalSecondsToCook = pizzaHeatingTime
 default: print("Not a valid food item from the list.")
-  print("\nDone.")
-  exit(002)
+    print("\nDone.")
+    exit(002)
 }
 
 // User prompt
